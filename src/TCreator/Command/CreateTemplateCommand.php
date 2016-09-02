@@ -10,7 +10,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
-use Templates\Standard\Index as Content;
+use Templates\Create\Creator;
 
 class CreateTemplateCommand extends Command
 {
@@ -27,24 +27,23 @@ class CreateTemplateCommand extends Command
 
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        $contents = Content::getText();
-        // var_dump($contents);
+        $contents = new Creator;
+        $contents->getIndex();
+        // var_dump($contents->getIndex());
         $output->writeln([
             '',
-            'TCreator app',
-            '-------------------------------',
-            'create a new template.',
+            'TCreator: create a new template',
             ''
         ]);
 
-        $output->writeln('File Name: ' . $input->getArgument('filename'));
+        $output->writeln('Project created at : ' . $input->getArgument('filename') . '/ folder');
 
         $fs = new Filesystem();
 
         try {
-            // $fs->mkdir($input->getArgument('filename').'.php');
+            $fs->mkdir($input->getArgument('filename'));
             // $fs->touch($input->getArgument('filename').'.php');
-            $fs->dumpFile($input->getArgument('filename').'.php', $contents);
+            $fs->dumpFile($input->getArgument('filename').'/index.php', $contents->getIndex());
 
         } catch (Exception $e) {
             echo "An error occurred while creating your directory at ".$e->getPath();

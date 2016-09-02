@@ -1,18 +1,4 @@
-<?php
-
-namespace Templates\Standard;
-
-class Index
-{
-    function __construct()
-    {
-        # code...
-    }
-
-    public static function getText()
-    {
-        return [
-'<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -46,9 +32,4 @@ class Index
 <body>
     <h1>Test!!</h1>
 </body>
-</html>'
-];
-    }
-}
-
-?>
+</html>
