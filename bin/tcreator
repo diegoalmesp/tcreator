@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/../vendor//autoload.php';
+
+use TCreator\Command;
+use Symfony\Component\Console\Application;
+
+$app = new Application('TCreator', '0.1-dev');
+$app->add(new Command\AboutCommand());
+$app->add(new Command\CreateTemplateCommand());
+
+$app->run();
+
+?>

@@ -1,0 +1,19 @@
+{
+    "name": "diegoalmesp/template-creator",
+    "description": "Small program to create templates with php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diego",
+            "email": "diegoalmesp@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^3.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "TCreator": "src"
+        }
+    }
+}
