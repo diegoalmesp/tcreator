@@ -28,8 +28,7 @@ class CreateTemplateCommand extends Command
     public function execute(InputInterface $input, OutputInterface $output)
     {
         $contents = new Creator;
-        $contents->getIndex();
-        // var_dump($contents->getIndex());
+
         $output->writeln([
             '',
             'TCreator: create a new template',
@@ -41,10 +40,10 @@ class CreateTemplateCommand extends Command
         $fs = new Filesystem();
 
         try {
-            $fs->mkdir($input->getArgument('filename'));
+            // $fs->mkdir($input->getArgument('filename'));
             // $fs->touch($input->getArgument('filename').'.php');
             $fs->dumpFile($input->getArgument('filename').'/index.php', $contents->getIndex());
-
+            $fs->dumpFile($input->getArgument('filename').'/css/target.css', '/* your custom css styles */');
         } catch (Exception $e) {
             echo "An error occurred while creating your directory at ".$e->getPath();
         }

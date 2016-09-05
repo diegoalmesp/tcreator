@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Example File</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Me">
+    <link rel="stylesheet" href="path/to/file.css">
+    <!-- /Siempre incluimos esto-->
+    <!-- Momentaneo-->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <h1>Example File</h1>
+    <p>TCreator will "only" consider the files that start with a number: </p>
+    <ol>
+        <li>01head.html</li>
+        <li>02body.html</li>
+        <li>03content.html</li>
+        <li>04footer.html</li>
+        <li>05scripts.html</li>
+    </ol>
+</body>
+</html>
